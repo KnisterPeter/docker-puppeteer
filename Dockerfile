@@ -1,7 +1,7 @@
 #
 # Gitlab CI base image for running test with puppeteer
 #
-FROM node:8
+FROM node:6
 
 RUN apt-get update -y &&  apt-get upgrade -y && \
     apt-get install gconf-service libasound2 libatk1.0-0 libc6 \
