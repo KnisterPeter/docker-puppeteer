@@ -13,7 +13,6 @@ RUN apt-get update -y &&  apt-get upgrade -y && \
         libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates \
         fonts-liberation libappindicator1 libnss3 lsb-release \
         xdg-utils wget openssh-client -y 
-RUN eval $(ssh-agent -s)
 
 RUN mkdir -p ~/.ssh
 RUN [ -f /.dockerenv ] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
