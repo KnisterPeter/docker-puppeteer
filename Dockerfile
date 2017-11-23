@@ -15,6 +15,6 @@ RUN apt-get update -y &&  apt-get upgrade -y && \
         xdg-utils wget openssh-client -y 
 
 RUN mkdir -p ~/.ssh
-RUN [ -f /.dockerenv ] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+RUN echo "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
 
 RUN npm install puppeteer
